@@ -19,4 +19,17 @@ while True:
                 match venta:
                     case "0":
                         print("Saliendo")
-                ventas.append(venta)
+                        break
+                    case _:
+                        ventas.append(venta)
+        case "2":
+            print("\nVentas ingresadas:")
+            print(ventas)
+
+        case "3":
+            print("Calculando la venta mas alta y la más baja")
+
+        case "4":
+            promedio=sum(ventas)/len(ventas)
+            print(f"El promedio de ventas es{promedio}")
+
