@@ -7,15 +7,14 @@ while True:
     print("3.Calcular la venta mas alta y la mas baja")
     print("4.Calcular promedio de ventas")
     print("5.Contar cuantos días superaron los Q.1000")
-    print("6. Buscar si una venta específica existe en la lista")
-    print("7.Clasificacion de cada venta")
-    print("8.Salir")
+    print("6.Clasificacion de cada venta")
+    print("7.Salir")
     option=input("\nSeleccione una opcion: ")
 
     match option:
         case "1":
             while True:
-                venta=input("Ingrese la venta o 0 para salir")
+                venta=input("Ingrese la venta o 0 para salir:")
                 match venta:
                     case "0":
                         print("Saliendo")
@@ -33,3 +32,12 @@ while True:
             promedio=sum(ventas)/len(ventas)
             print(f"El promedio de ventas es{promedio}")
 
+        case "5":
+            print("dias superados de los Q.1000")
+
+        case "6":
+            print("Clasificacion de cada lista")
+
+        case "7":
+            print("Saliendo del programa")
+            break
