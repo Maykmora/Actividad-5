@@ -48,11 +48,23 @@ while True:
                 print("La lista está vacía")
 
         case "4":
-            promedio=sum(ventas)/len(ventas)
-            print(f"El promedio de ventas es{promedio}")
+            if ventas:
+                print("\n--PROMEDIO--")
+                promedio=sum(ventas)/len(ventas)
+                print(f"El promedio de ventas es {promedio:.1f}")
+            else:
+                print("No hay ventas registradas para calcular el promedio")
 
         case "5":
-            print("dias superados de los Q.1000")
+            print("\n--CONTADOR--")
+            if ventas:
+                contador=0
+                for venta in ventas:
+                    if venta>1000:
+                        contador+=1
+                print(f"La cantidad de días que se superaron los Q.1000 fueron: {contador}")
+            else:
+                print("No hay ventas registradas para calcular la cantidad de dias que pasan los Q.1000")
 
         case "6":
             print("Clasificacion de cada lista")
