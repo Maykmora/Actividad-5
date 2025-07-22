@@ -73,12 +73,18 @@ while True:
                 venta_media = []
                 venta_alta = []
                 for venta in ventas:
-                    if ventas[venta]<500:
-                        venta_baja.append(ventas[venta])
+                    if venta<500:
+                        venta_baja.append(venta)
                     elif 500<=venta<1000:
-                        venta_media.append(ventas[venta])
+                        venta_media.append(venta)
                     else:
-                        venta_alta.append(ventas[venta])
+                        venta_alta.append(venta)
+                print("--VENTAS ALTAS--")
+                print(venta_alta)
+                print("--VENTAS MEDIAS--")
+                print(venta_media)
+                print("--VENTAS BAJAS--")
+                print(venta_baja)
             else:
                 print("No hay ventas registradas para poder clasificarlas")
 
