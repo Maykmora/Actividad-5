@@ -33,7 +33,7 @@ while True:
         case "2":
             print("\n--HISTORIAL DE VENTAS--")
             for i in range(len(ventas)):
-                print(f"Día {i}: {ventas[i]}")
+                print(f"Día {i+1}: {ventas[i]}")
 
         case "3":
             print("\n--VENTAS--")
@@ -42,8 +42,8 @@ while True:
                 menor=min(ventas)
                 dia_mayor=ventas.index(mayor)
                 dia_menor=ventas.index(menor)
-                print(f"La venta mas alta fue Q.{mayor} en el día {dia_mayor}")
-                print(f"La venta mas baja fue Q.{menor} en el día {dia_menor}")
+                print(f"La venta mas alta fue Q.{mayor} en el día {dia_mayor+1}")
+                print(f"La venta mas baja fue Q.{menor} en el día {dia_menor+1}")
             else:
                 print("La lista está vacía")
 
@@ -79,11 +79,11 @@ while True:
                         venta_media.append(venta)
                     else:
                         venta_alta.append(venta)
-                print("--VENTAS ALTAS--")
+                print("\n--VENTAS ALTAS--")
                 print(venta_alta)
-                print("--VENTAS MEDIAS--")
+                print("\n--VENTAS MEDIAS--")
                 print(venta_media)
-                print("--VENTAS BAJAS--")
+                print("\n--VENTAS BAJAS--")
                 print(venta_baja)
             else:
                 print("No hay ventas registradas para poder clasificarlas")
