@@ -18,7 +18,7 @@ while True:
             if days>0:
                 for i in range(days):
                     while True:
-                        venta=input("Ingrese la venta del día:")
+                        venta=input(f"Ingrese la venta del día {i+1}:")
                         if venta.isdigit():
                             venta_int=int(venta)
                             if venta_int>0:
@@ -67,8 +67,24 @@ while True:
                 print("No hay ventas registradas para calcular la cantidad de dias que pasan los Q.1000")
 
         case "6":
-            print("Clasificacion de cada lista")
+            print("\n--CLASIFICACION DE LISTAS--")
+            if ventas:
+                venta_baja = []
+                venta_media = []
+                venta_alta = []
+                for venta in ventas:
+                    if ventas[venta]<500:
+                        venta_baja.append(ventas[venta])
+                    elif 500<=venta<1000:
+                        venta_media.append(ventas[venta])
+                    else:
+                        venta_alta.append(ventas[venta])
+            else:
+                print("No hay ventas registradas para poder clasificarlas")
 
         case "7":
             print("Saliendo del programa")
             break
+
+        case _:
+            print("Opcion invalida, intentelo de nuevo")
