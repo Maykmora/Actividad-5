@@ -31,7 +31,8 @@ while True:
                 print("Error al ingresar datos")
         case "2":
             print("\nVentas ingresadas:")
-            print(ventas)
+            for i in range(len(ventas)):
+                print(f"Día {i}: {ventas[i]}")
 
         case "3":
             print("Calculando la venta mas alta y la más baja")
