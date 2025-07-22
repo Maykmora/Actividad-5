@@ -15,7 +15,7 @@ while True:
     match option:
         case "1":
             while True:
-                venta=input("Ingrese la venta o "0" para salir")
+                venta=input("Ingrese la venta o 0 para salir")
                 match venta:
                     case "0":
                         print("Saliendo")
