@@ -4,7 +4,7 @@ while True:
     print("\n--MENÚ DE OPCIONES--")
     print("1.Ingresar lista de ventas")   #Listo
     print("2.Mostrar todas las ventas ingresadas")   #Listo
-    print("3.Calcular la venta mas alta y la mas baja")
+    print("3.Calcular la venta mas alta y la mas baja") #listo
     print("4.Calcular promedio de ventas")
     print("5.Contar cuantos días superaron los Q.1000")
     print("6.Clasificacion de cada venta")
@@ -13,6 +13,7 @@ while True:
 
     match option:
         case "1":
+            print("\n--INGRESAR VENTA--")
             days=int(input("Ingrese el numero de días que desea agregar: "))
             if days>0:
                 for i in range(days):
@@ -21,7 +22,7 @@ while True:
                         if venta.isdigit():
                             venta_int=int(venta)
                             if venta_int>0:
-                                ventas.append(venta)
+                                ventas.append(venta_int)
                                 break
                             else:
                                 print("Valor invalido, intentelo de nuevo")
@@ -30,15 +31,19 @@ while True:
             else:
                 print("Error al ingresar datos")
         case "2":
-            print("\nVentas ingresadas:")
+            print("\n--HISTORIAL DE VENTAS--")
             for i in range(len(ventas)):
                 print(f"Día {i}: {ventas[i]}")
 
         case "3":
-            print("Calculando la venta mas alta y la más baja")
+            print("\n--VENTAS--")
             if ventas:
-                print("Máximo:", max(ventas))
-                print("Mínimo:", min(ventas))
+                mayor=max(ventas)
+                menor=min(ventas)
+                dia_mayor=ventas.index(mayor)
+                dia_menor=ventas.index(menor)
+                print(f"La venta mas alta fue Q.{mayor} en el día {dia_mayor}")
+                print(f"La venta mas baja fue Q.{menor} en el día {dia_menor}")
             else:
                 print("La lista está vacía")
 
